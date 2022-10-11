@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { style } from "wavesurfer.js/src/util";
 
 export const WaveformContianer = styled.div`
   display: flex;
