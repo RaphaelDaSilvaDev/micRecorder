@@ -105,7 +105,7 @@ function App() {
             Start
           </button>
         )}
-        {audio.length > 0 && (
+        {(audio.length > 0 && !isRecording) && (
           <button onClick={sendData} type="button">
             Enviar
           </button>
