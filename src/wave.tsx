@@ -49,6 +49,10 @@ export function Wave({ audio }: WaveProps) {
     waveSufer?.playPause();
   };
 
+  useEffect(() =>{
+    waveSufer?.on('finish', () => setIsPlaying(false))
+  },[handlePlay])
+
   const minutesAmount = Math.floor(audio.startTime >= 60 ? audio.startTime / 60 : 0);
   const secondsAmount = Math.floor(audio.startTime % 60);
 

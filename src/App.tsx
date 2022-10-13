@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ReactMic, ReactMicStopEvent } from "react-mic";
 import { Container, Inputs, Waves } from "./styles";
 import { Wave } from "./wave";
+import './App.css'
 
 function App() {
   const [isRecording, setIsRecording] = useState<boolean>(false);
@@ -11,6 +12,7 @@ function App() {
   // Array de audios Concatenados, transformando em um áudio
   const [concatAudio, setConcatAudio] = useState<Blob | null>(null);
   const [sendAudio, setSendAudio] = useState<ReactMicStopEvent[]>([]);
+
 
   const startRecording = () => {
     setIsRecording(true);
